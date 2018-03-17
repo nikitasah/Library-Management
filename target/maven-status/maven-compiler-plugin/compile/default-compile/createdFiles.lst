@@ -1,0 +1,16 @@
+com\utd\libmgmnt\service\BookSearchService.class
+com\utd\libmgmnt\service\BookCheckInService.class
+com\utd\libmgmnt\model\Book.class
+com\utd\libmgmnt\dao\FineDAO.class
+com\utd\libmgmnt\model\Borrower.class
+com\utd\libmgmnt\dao\LoanDAO.class
+com\utd\libmgmnt\dao\BorrowerDAO.class
+com\utd\libmgmnt\util\DbConnectionManager.class
+com\utd\libmgmnt\model\Loan.class
+com\utd\libmgmnt\model\Fine.class
+com\utd\libmgmnt\dao\AppContextListener.class
+com\utd\libmgmnt\dao\BookDAO.class
+com\utd\libmgmnt\model\Author.class
+com\utd\libmgmnt\service\BorrowerManageService.class
+com\utd\libmgmnt\service\BookCheckOutService.class
+com\utd\libmgmnt\service\FineTrackingService.class

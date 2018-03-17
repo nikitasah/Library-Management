@@ -1,0 +1,16 @@
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\dao\BookDAO.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\service\FineTrackingService.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\model\Book.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\model\Loan.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\dao\BorrowerDAO.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\service\BorrowerManageService.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\model\Fine.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\model\Author.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\util\DbConnectionManager.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\service\BookSearchService.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\dao\LoanDAO.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\dao\AppContextListener.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\dao\FineDAO.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\service\BookCheckInService.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\model\Borrower.java
+E:\practice\java\libmgmnt\src\main\java\com\utd\libmgmnt\service\BookCheckOutService.java
