@@ -88,6 +88,10 @@
 		<c:if test="${not empty errorloan}">
 		   <c:out value="${errorloan}"/>
 		</c:if>
+		
+		<c:if test="${not empty errorcardid}">
+		   <c:out value="${errorcardid}"/>
+		</c:if>
 	</div>
 	<div id ="success">
 		<c:if test="${not empty success}">

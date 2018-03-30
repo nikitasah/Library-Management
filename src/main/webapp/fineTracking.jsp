@@ -36,6 +36,12 @@
 		text-align: center;
 		overflow: auto;
 		}
+	#success {
+		color:black;
+		text-align:center;
+		font-size:18pt;
+		}
+	
 	</style>
 </head>
 <body>
@@ -49,6 +55,16 @@
 	<div id="error">
 		<c:if test="${not empty errordisplayfine}">
 	   		<c:out value="${errordisplayfine}"/>
+		</c:if>
+	</div>
+	<div id="error">
+		<c:if test="${not empty errordisplayfine}">
+	   		<c:out value="${errordisplayfine}"/>
+		</c:if>
+	</div>
+	<div id ="success">
+		<c:if test="${not empty success}">
+   			<c:out value="${success}"/>
 		</c:if>
 	</div>
 	<div class="container">

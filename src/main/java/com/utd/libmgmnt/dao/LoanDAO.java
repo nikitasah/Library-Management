@@ -46,24 +46,32 @@ public class LoanDAO {
 	
 	public static boolean insertLoanRecord(Connection con, String cardId, String isbn) {
 		try {
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-			Calendar c = Calendar.getInstance();
-			Calendar c1 = Calendar.getInstance();
-			c1.add(Calendar.DATE, 0); //Today's date
-			c.add(Calendar.DATE, 14); // Adding 14 days
-			String dueDate = sdf.format(c.getTime());
-			String dateOut = sdf.format(c1.getTime());
-			ps = con.prepareStatement("insert into loan(isbn13,card_id,date_out,due_date) values(?,?,?,?)");
-			ps.setString(1, isbn.substring(1));
-			ps.setString(2, cardId.toUpperCase());
-			ps.setString(3, dateOut);
-			ps.setString(4, dueDate);
-			ps.execute();	
-			ps = con.prepareStatement("update book set no_of_copies_available=no_of_copies_available-? where isbn13=? and no_of_copies_available=?"); 
-			ps.setString(1, "1");
-			ps.setString(2, isbn.substring(1));
-			ps.setString(3, "1");
-			ps.execute();
+			ps = con.prepareStatement("select * from borrowers where card_id = ?");
+			ps.setString(1, cardId.toUpperCase());
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+				Calendar c = Calendar.getInstance();
+				Calendar c1 = Calendar.getInstance();
+				c1.add(Calendar.DATE, 0); //Today's date
+				c.add(Calendar.DATE, 14); // Adding 14 days
+				String dueDate = sdf.format(c.getTime());
+				String dateOut = sdf.format(c1.getTime());
+				ps = con.prepareStatement("insert into loan(isbn13,card_id,date_out,due_date) values(?,?,?,?)");
+				ps.setString(1, isbn.substring(1));
+				ps.setString(2, cardId.toUpperCase());
+				ps.setString(3, dateOut);
+				ps.setString(4, dueDate);
+				ps.execute();	
+				ps = con.prepareStatement("update book set no_of_copies_available = no_of_copies_available-? where isbn13=? and no_of_copies_available=?"); 
+				ps.setString(1, "1");
+				ps.setString(2, isbn.substring(1));
+				ps.setString(3, "1");
+				ps.execute();
+			}
+			else {
+				return false;
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("Database connection problem");

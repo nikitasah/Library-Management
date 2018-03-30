@@ -44,6 +44,9 @@ public class BookCheckOutService extends HttpServlet {
 			if(result) {
 				request.setAttribute("success", "Record successfully inserted.");
 			}
+			else {
+				request.setAttribute("errorcardid", "Card id does not exist.");
+			}
 		}
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.jsp");
 	   	rd.forward(request, response);

@@ -49,6 +49,7 @@ public class FineTrackingService extends HttpServlet {
 		// To update fine table
 		else if(request.getParameter("update") != null) {
 			FineDAO.updateFine(con);
+			request.setAttribute("success", "Fine table successfully updated");
 		}
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/fineTracking.jsp");
 	   	rd.forward(request, response);
